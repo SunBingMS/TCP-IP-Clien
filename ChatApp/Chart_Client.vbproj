@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C871E7D-748E-42FE-9898-B50FDC605F68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>SKB_Powertool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FrmClient</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Client.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.4.0.0, Culture=neutral, PublicKeyToken=dc91bbef911870e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.4.0.0, Culture=neutral, PublicKeyToken=dc91bbef911870e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=dc91bbef911870e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NetComm">
+      <HintPath>.\NetComm.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClient.Designer.vb">
+      <DependentUpon>FrmClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include="FrmClient.resx">
+      <DependentUpon>FrmClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accept.png" />
+    <Content Include="Clear.png" />
+    <Content Include="Clear_down.png" />
+    <Content Include="Client.ico" />
+    <Content Include="Close.png" />
+    <Content Include="Update.png" />
+    <None Include="faceicon\face01.png" />
+    <None Include="faceicon\face02.png" />
+    <None Include="faceicon\face03.png" />
+    <None Include="faceicon\face04.png" />
+    <None Include="faceicon\face05.png" />
+    <None Include="faceicon\face06.png" />
+    <None Include="faceicon\face07.png" />
+    <None Include="faceicon\face08.png" />
+    <None Include="faceicon\face09.png" />
+    <None Include="faceicon\face10.png" />
+    <None Include="faceicon\face11.png" />
+    <None Include="faceicon\face12.png" />
+    <None Include="faceicon\face13.png" />
+    <None Include="faceicon\face14.png" />
+    <None Include="faceicon\face15.png" />
+    <None Include="faceicon\face16.png" />
+    <None Include="faceicon\face17.png" />
+    <None Include="faceicon\face18.png" />
+    <None Include="faceicon\face19.png" />
+    <None Include="faceicon\face20.png" />
+    <None Include="faceicon\face21.png" />
+    <None Include="faceicon\face22.png" />
+    <None Include="faceicon\face23.png" />
+    <None Include="faceicon\face24.png" />
+    <None Include="faceicon\face25.png" />
+    <None Include="faceicon\face26.png" />
+    <None Include="faceicon\face27.png" />
+    <None Include="faceicon\face28.png" />
+    <None Include="faceicon\face29.png" />
+    <None Include="faceicon\face30.png" />
+    <None Include="faceicon\face31.png" />
+    <None Include="faceicon\face32.png" />
+    <None Include="faceicon\face33.png" />
+    <None Include="faceicon\face34.png" />
+    <None Include="faceicon\face35.png" />
+    <None Include="faceicon\face36.png" />
+    <None Include="faceicon\face37.png" />
+    <None Include="faceicon\face38.png" />
+    <None Include="faceicon\face39.png" />
+    <None Include="faceicon\face40.png" />
+    <None Include="faceicon\face41.png" />
+    <None Include="faceicon\face42.png" />
+    <None Include="faceicon\face43.png" />
+    <None Include="faceicon\face44.png" />
+    <None Include="faceicon\face45.png" />
+    <None Include="faceicon\face46.png" />
+    <None Include="faceicon\face47.png" />
+    <None Include="faceicon\face48.png" />
+    <None Include="faceicon\face49.png" />
+    <None Include="faceicon\face50.png" />
+    <None Include="faceicon\face51.png" />
+    <None Include="faceicon\face52.png" />
+    <None Include="faceicon\face53.png" />
+    <None Include="faceicon\face54.png" />
+    <Content Include="ComponentFactory.Krypton.Design.dll" />
+    <Content Include="ComponentFactory.Krypton.Docking.dll" />
+    <Content Include="ComponentFactory.Krypton.Navigator.dll" />
+    <Content Include="ComponentFactory.Krypton.Ribbon.dll" />
+    <Content Include="ComponentFactory.Krypton.Toolkit.dll" />
+    <Content Include="ComponentFactory.Krypton.Workspace.dll" />
+    <Content Include="NetComm.dll" />
+    <Content Include="Send.png" />
+    <Content Include="Send_down.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
